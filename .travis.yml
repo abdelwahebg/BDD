@@ -4,7 +4,14 @@ jdk:
  - oraclejdk8 
  - oraclejdk7
  
+addons:
+ -sonarqube: true
+ 
+ 
 branches:
   only:
     - master
     - desenvolvimento
+    
+script:
+  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonnar    
