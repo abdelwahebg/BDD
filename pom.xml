@@ -8,15 +8,12 @@
     <artifactId>BDDExample</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-
-
-
     <properties>
         <cucumber.version>1.2.0</cucumber.version>
         <junit.version>4.11</junit.version>
         <picocontainer.version>2.14.2</picocontainer.version>
         <sonar.host.url>https://sonarqube.com</sonar.host.url>
-        <sonar.login>207ddb6034c2314c6fcad47b8839be980c158e62</sonar.login>
+        <sonar.login>ac26dfd8e4c99fc91b9e975ced94274fd54a73a6</sonar.login>
     </properties>
 
     <dependencies>
