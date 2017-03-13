@@ -17,7 +17,7 @@
         <picocontainer.version>2.14.2</picocontainer.version>
              
             <sonar.host.url>https://sonarqube.com</sonar.host.url>
-            <sonar.login>4d3569a1813b4d34df92dc574dbdd7989bedd2ae</sonar.login>        
+            <sonar.login>207ddb6034c2314c6fcad47b8839be980c158e62</sonar.login>        
     </properties>
 
     <dependencies>
