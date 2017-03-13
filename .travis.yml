@@ -4,13 +4,10 @@ jdk:
  - oraclejdk8 
  
 addons:
- -sonarqube: true
+  sonarqube: true
     token:
-      secure:"AMH/7aIwWfiSTBEqlFQ+R3GavwslCvIHIIWRUibonJBE+Hgqbjb2vSciPAE/L3U+wMCRDi3Q0w4fxGfzvXr6hGa/vQ6odT0eg6JgaSHeL2XPnegZPGjqePuESZSeqsoTPqDzFIrdN+UhxuUJCOwKaQydOXUNJ3gyx+RJszJs0E0=" 
- apt:
-    packages:
-      - oracle-java8-installer
-
+      secure: "AMH/7aIwWfiSTBEqlFQ+R3GavwslCvIHIIWRUibonJBE+Hgqbjb2vSciPAE/L3U+wMCRDi3Q0w4fxGfzvXr6hGa/vQ6odT0eg6JgaSHeL2XPnegZPGjqePuESZSeqsoTPqDzFIrdN+UhxuUJCOwKaQydOXUNJ3gyx+RJszJs0E0=" 
+ 
 branches:
   only:
     - master
@@ -20,7 +17,6 @@ before_script:
   - export JAVA_HOME=/usr/lib/jvm/java-8-oracle
   
 script:
-  # JaCoCo is used to have code coverage, the agent has to be activated
   - sonar:sonar
 
 cache:
