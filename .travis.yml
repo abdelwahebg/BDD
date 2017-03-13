@@ -11,7 +11,7 @@ addons:
 
 env:
   global:
-- secure:
+- secure:"AMH/7aIwWfiSTBEqlFQ+R3GavwslCvIHIIWRUibonJBE+Hgqbjb2vSciPAE/L3U+wMCRDi3Q0w4fxGfzvXr6hGa/vQ6odT0eg6JgaSHeL2XPnegZPGjqePuESZSeqsoTPqDzFIrdN+UhxuUJCOwKaQydOXUNJ3gyx+RJszJs0E0="
  
 branches:
   only:
@@ -22,7 +22,7 @@ before_script:
   - export JAVA_HOME=/usr/lib/jvm/java-8-oracle
 
 script:
-  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
+  - sonar-scanner -Dsonar.login=$SONAR_TOKEN 
   
   
    
