@@ -2,7 +2,6 @@ language: java
 
 jdk:
  - oraclejdk8 
- - oraclejdk7
  
 addons:
  -sonarqube: true
@@ -13,7 +12,7 @@ branches:
     - desenvolvimento
     
 script:
-  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.login=$SONAR_TOKEN    
+  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.login=4d3569a1813b4d34df92dc574dbdd7989bedd2ae
   
   
    
