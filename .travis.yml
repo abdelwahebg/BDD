@@ -14,4 +14,7 @@ branches:
     - desenvolvimento
     
 script:
-  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonnar    
+  - sonar-scanner
+  
+  
+   
