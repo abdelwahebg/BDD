@@ -18,7 +18,7 @@ before_script:
   - export JAVA_HOME=/usr/lib/jvm/java-8-oracle
 
 script:
- - sonar-scanner -Dsonar.login=4d3569a1813b4d34df92dc574dbdd7989bedd2ae
+  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
   
   
    
