@@ -13,7 +13,7 @@ branches:
   - desenvolvimento
 
 after_script:
-- ./sonar-runner-2.4/bin/sonar-runner
+- ./sonar-runner-2.4/bin/sonar-runner -e
 
 #addons:
 #  sonarqube: true
