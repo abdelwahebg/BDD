@@ -4,9 +4,7 @@ jdk:
   - oraclejdk8
 
 addons:
-  sonarqube:
-    token:
-      secure: LJfmVXRVfGWK2U7cOLRsGkdSsgLOPuqvkSJdecyspiF/xn98bY6KQ5huY0VofEW36izdXS73XWjlUNYy2oy0j3HHs7Sq4IkSG3qmXkFMu6wYNpjX7+roCM9VcUjGkZfJVsfI1JQQNTN377GigzhtacGaPlp0JZDJThsDgyQhjTQ=
+  sonarqube: true
 
 env:
   global:
