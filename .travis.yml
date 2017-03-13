@@ -15,4 +15,4 @@ cache:
    - '$HOME/.sonar/cache'
    
 script:
- - mvn sonar:sonar -Dsonar.login=$SONAR_TOKEN 
+ - sonar-scanner -Dsonar.login=$SONAR_TOKEN 
