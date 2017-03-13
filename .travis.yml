@@ -14,5 +14,4 @@ cache:
    - '$HOME/.sonar/cache'
    
 script:
- 
-  - mvn clean install sonar:sonar
+ - mvn clean install sonar:sonar -Dsonar.login=$SONAR_TOKEN 
