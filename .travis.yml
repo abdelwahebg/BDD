@@ -4,14 +4,15 @@ jdk:
  - oraclejdk8
 
 addons:
-  sonarqube:
-    token:
-      secure:"AMH/7aIwWfiSTBEqlFQ+R3GavwslCvIHIIWRUibonJBE+Hgqbjb2vSciPAE/L3U+wMCRDi3Q0w4fxGfzvXr6hGa/vQ6odT0eg6JgaSHeL2XPnegZPGjqePuESZSeqsoTPqDzFIrdN+UhxuUJCOwKaQydOXUNJ3gyx+RJszJs0E0=" 
-  
+  sonarqube: true
+env:
+  global:
+    - secure: "AMH/7aIwWfiSTBEqlFQ+R3GavwslCvIHIIWRUibonJBE+Hgqbjb2vSciPAE/L3U+wMCRDi3Q0w4fxGfzvXr6hGa/vQ6odT0eg6JgaSHeL2XPnegZPGjqePuESZSeqsoTPqDzFIrdN+UhxuUJCOwKaQydOXUNJ3gyx+RJszJs0E0=" 
+
 cache:
  directories:
    - '$HOME/.m2/repository'
    - '$HOME/.sonar/cache'
    
 script:
- - mvn clean install sonar:sonar -Dsonar.login=$SONAR_TOKEN 
+ - mvn sonar:sonar -Dsonar.login=$SONAR_TOKEN 
