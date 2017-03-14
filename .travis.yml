@@ -1,19 +1,11 @@
 language: java
-
 jdk:
   - oraclejdk8
-branches:
- only:
-  - master
-  - desenvolvimento
 
 addons:
-  sonarqube: true
-
-env:
-  global:
-   - secure: LJfmVXRVfGWK2U7cOLRsGkdSsgLOPuqvkSJdecyspiF/xn98bY6KQ5huY0VofEW36izdXS73XWjlUNYy2oy0j3HHs7Sq4IkSG3qmXkFMu6wYNpjX7+roCM9VcUjGkZfJVsfI1JQQNTN377GigzhtacGaPlp0JZDJThsDgyQhjTQ=
-
+  sonarqube:
+    token: e0a5530fb20de033069cc08f5c4c71dfa7576d27
+    
 script:
- - mvn test -B
- - sonar-scanner -Dsonar.login=$SONAR_TOKEN
+  - mvn test -B
+  - sonar-scanner
