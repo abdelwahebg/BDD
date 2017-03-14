@@ -12,8 +12,6 @@
         <cucumber.version>1.2.0</cucumber.version>
         <junit.version>4.11</junit.version>
         <picocontainer.version>2.14.2</picocontainer.version>
-        <sonar.host.url>https://sonarqube.com</sonar.host.url>
-        <sonar.login>ac26dfd8e4c99fc91b9e975ced94274fd54a73a6</sonar.login>
     </properties>
 
     <dependencies>
