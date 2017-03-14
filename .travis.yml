@@ -4,25 +4,21 @@ dist: trusty
 jdk:
   - oraclejdk8
 
-before_install:
-  - wget http://repo1.maven.org/maven2/org/codehaus/sonar/runner/sonar-runner-dist/2.4/sonar-runner-dist-2.4.zip
-  - unzip sonar-runner-dist-2.4.zip
   
 branches:
  only:
   - master
   - desenvolvimento
 
-after_script:
-- ./sonar-runner-2.4/bin/sonar-runner -e
 
-#addons:
-#  sonarqube: true
+addons:
+  sonarqube: true
 
-#env:
-#  global:
-#  - secure: LJfmVXRVfGWK2U7cOLRsGkdSsgLOPuqvkSJdecyspiF/xn98bY6KQ5huY0VofEW36izdXS73XWjlUNYy2oy0j3HHs7Sq4IkSG3qmXkFMu6wYNpjX7+roCM9VcUjGkZfJVsfI1JQQNTN377GigzhtacGaPlp0JZDJThsDgyQhjTQ=
+env:
+  global:
+   - secure: LJfmVXRVfGWK2U7cOLRsGkdSsgLOPuqvkSJdecyspiF/xn98bY6KQ5huY0VofEW36izdXS73XWjlUNYy2oy0j3HHs7Sq4IkSG3qmXkFMu6wYNpjX7+roCM9VcUjGkZfJVsfI1JQQNTN377GigzhtacGaPlp0JZDJThsDgyQhjTQ=
 
 
-#script:
-#  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.login=$SONAR_TOKEN
+script:
+ - mvn test -B
+ - sonar-scanner -Dsonar.login=$SONAR_TOKEN
